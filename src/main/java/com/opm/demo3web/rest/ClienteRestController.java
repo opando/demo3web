@@ -19,14 +19,16 @@ public class ClienteRestController {
 	
 	@RequestMapping(value="/cliente", method=RequestMethod.POST)
 	public Cliente registrarCliente(@RequestBody Cliente cliente) {
-					
+		
+		System.out.println("nombre : " + cliente.getNombre());
+		
 		Cliente c = clienteRepository.save(cliente);
 				
 		return c;
 	}
 	
 	@RequestMapping(value="/cliente/{id}", method=RequestMethod.GET)
-	public Cliente obtenerCliente(@PathVariable String id) {
+	public Cliente obtenerCliente(@PathVariable Long id) {
 		
 		Cliente c = clienteRepository.findOne(id);
 		

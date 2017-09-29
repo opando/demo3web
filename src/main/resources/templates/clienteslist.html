@@ -4,13 +4,14 @@
 
     <title>Spring Framework Demo3web</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    
 </head>
 <body>
+<h2>Demo3</h2>
 <div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    
     <div th:if="${not #lists.isEmpty(clientes)}">
-        <h2>Product List</h2>
+        <h2>cliente List</h2>
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
@@ -25,9 +26,9 @@
                 <td th:text="${cliente.nombre}">nombre</td>
                 <td th:text="${cliente.apellido}">ape</td>
                
-                <td><a th:href="${'/product/' + product.id}">View</a></td>
-                <td><a th:href="${'/product/edit/' + product.id}">Edit</a></td>
-                <td><a th:href="${'/product/delete/' + product.id}">Delete</a></td>
+                <td><a th:href="${'/cliente/' + cliente.id}">View</a></td>
+                <td><a th:href="${'/cliente/edit/' + cliente.id}">Edit</a></td>
+                <td><a th:href="${'/cliente/delete/' + cliente.id}">Delete</a></td>
             </tr>
         </table>
 
